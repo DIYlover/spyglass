@@ -39,7 +39,7 @@ def main(args=None):
     parsed_args = get_args(args)
 
     bind_address = parsed_args.bindaddress
-    camera_num = parsed_args.csi_port_num
+    camera_num = parsed_args.csi_port_no
     port = parsed_args.port
     width, height = split_resolution(parsed_args.resolution)
     stream_url = parsed_args.stream_url
