@@ -26,7 +26,7 @@ def init_camera(
         tuning = Picamera2.load_tuning_file(**params)
 
     picam2 = Picamera2(tuning=tuning)
-    picam2 = picamera2.Picamera2(camera_num=camera_num)
+    picam2 = Picamera2(camera_num=camera_num)
     controls = {'FrameRate': fps}
 
     c = process_controls(picam2, [tuple(ctrl) for ctrl in control_list])
