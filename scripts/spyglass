@@ -109,21 +109,6 @@ run_spyglass() {
     --tuning_filter_dir "${TUNING_FILTER_DIR:-}" \
     --controls-string "${CONTROLS:-0=0}" # 0=0 to prevent error on empty string
 
-    "${PY_BIN}" "$(dirname "${BASE_SPY_PATH}")/run.py" \
-    --csi_port_no 1 \
-    --bindaddress "${bind_adress}" \
-    --port "${HTTP_PORT:-8081}" \
-    --resolution "${RESOLUTION:-1920x1080}" \
-    --fps "${FPS:-15}" \
-    --stream_url "${STREAM_URL:-\/stream}" \
-    --snapshot_url "${SNAPSHOT_URL:-\/snapshot}" \
-    --autofocus "${AUTO_FOCUS:-continuous}" \
-    --lensposition "${FOCAL_DIST:-0.0}" \
-    --autofocusspeed "${AF_SPEED:-normal}" \
-    --orientation_exif "${ORIENTATION_EXIF:-h}" \
-    --tuning_filter "${TUNING_FILTER:-}"\
-    --tuning_filter_dir "${TUNING_FILTER_DIR:-}" \
-    --controls-string "${CONTROLS:-0=0}" # 0=0 to prevent error on empty string
 }
 
 #### MAIN
