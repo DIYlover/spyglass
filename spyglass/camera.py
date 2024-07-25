@@ -3,6 +3,7 @@ from spyglass.camera_options import process_controls
 from picamera2 import Picamera2
 
 def init_camera(
+        camera_num: int,
         width: int,
         height: int,
         fps: int,
@@ -25,6 +26,7 @@ def init_camera(
         tuning = Picamera2.load_tuning_file(**params)
 
     picam2 = Picamera2(tuning=tuning)
+    picam2 = picamera2.Picamera2(camera_num=camera_num)
     controls = {'FrameRate': fps}
 
     c = process_controls(picam2, [tuple(ctrl) for ctrl in control_list])
