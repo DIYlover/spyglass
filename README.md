@@ -2,8 +2,8 @@
 
 
 > I would like to take this opportunity to special thank the original author for this selfless sharing. Due to my usecase is to use Pi5
-along with 2 Pi CSI Camera at the same time, therefore I need an option to define what the camera to be in use with. That's why I fork
-this roject to make relevant modifications as needed.  Free free to use it if you found this useful for you.  Thanks!!!
+along with 2 Pi CSI Camera at the same time, therefore I need an option to define which the camera to be in use with. That's why I fork
+this project to make relevant modifications as needed.  Free free to use it if you found this useful for you.  Thanks!!!
 
 > **Please note that this project is in a very early stage. Use at your own risk. Think about contributing to the project
 if you find that something is not working, and you are able to fix it. Every contribution is appreciated.**
