@@ -45,6 +45,7 @@ On startup the following arguments are supported:
 
 | Argument                      | Description                                                                                                                        | Default      |
 |-------------------------------|------------------------------------------------------------------------------------------------------------------------------------|--------------|
+| `-n`, `--csi_port_no`         | CSI port number, additional port in Raspberry Pi 5 is 1, default is 0 if not specify                                               | 0            |
 | `-b`, `--bindaddress`         | Address where the server will listen for new incoming connections.                                                                 | `0.0.0.0`    |
 | `-p`, `--port`                | Port where the server will listen for new incoming connections.                                                                    | `8080`       |
 | `-r`, `--resolution`          | Resolution of the captured frames. This argument expects the format \<width\>x\<height\>                                           | `640x480`    |
@@ -66,7 +67,7 @@ On startup the following arguments are supported:
 Starting the server without any argument is the same as
 
 ```shell
-./run.py -b 0.0.0.0 -p 8080 -r 640x480 -f 15 -st '/stream' -sn '/snapshot' -af continuous -l 0.0 -s normal
+./run.py -n 0 -b 0.0.0.0 -p 8080 -r 640x480 -f 15 -st '/stream' -sn '/snapshot' -af continuous -l 0.0 -s normal
 ```
 
 The stream can then be accessed at `http://<IP of the server>:8080/stream`
