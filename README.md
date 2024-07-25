@@ -1,7 +1,7 @@
 # Spyglass
 
 
-> I would like to take this opportunity to special thank the original author for this selfless sharing. Due to my usecase is to use Pi5
+> **I would like to take this opportunity to special thank the original author for this selfless sharing. Due to my usecase is to use Pi5
 along with 2 Pi CSI Camera at the same time, therefore I need an option to define which the camera to be in use with. That's why I fork
 this project to make relevant modifications as needed.  Free free to use it if you found this useful for you.  Thanks!!!
 
