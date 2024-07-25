@@ -39,6 +39,7 @@ def main(args=None):
     parsed_args = get_args(args)
 
     bind_address = parsed_args.bindaddress
+    camera_num = parsed_args.csi_port_num
     port = parsed_args.port
     width, height = split_resolution(parsed_args.resolution)
     stream_url = parsed_args.stream_url
@@ -52,6 +53,7 @@ def main(args=None):
         return
 
     picam2 = init_camera(
+        camera_num,
         width,
         height,
         parsed_args.fps,
@@ -140,6 +142,7 @@ def get_parser():
         prog='spyglass',
         description='Start a webserver for Picamera2 videostreams.',
         formatter_class=argparse.RawTextHelpFormatter)
+    parser.add_argument('-n', '--csi_port_no', type=int, default=0, help='Bind to CSI port number, default is 0, additional port in Pi5 is 1')
     parser.add_argument('-b', '--bindaddress', type=str, default='0.0.0.0', help='Bind to address for incoming '
                                                                                  'connections')
     parser.add_argument('-p', '--port', type=int, default=8080, help='Bind to port for incoming connections')
